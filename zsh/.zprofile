@@ -10,8 +10,8 @@ fi
 # | Editors                            |
 # +------------------------------------+
 CURRENT_EDITOR="code-insiders"
-export EDITOR="${EDITOR:-$CURRENT_EDITOR}"
-export VISUAL="${VISUAL:-$CURRENT_EDITOR}"
+export EDITOR="${EDITOR:-$CURRENT_EDITOR} -w"
+export VISUAL="${VISUAL:-$CURRENT_EDITOR} -w"
 export PAGER="${PAGER:-less}"
 
 # +------------------------------------+

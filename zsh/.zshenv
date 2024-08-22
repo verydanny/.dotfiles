@@ -2,6 +2,7 @@
 # +------------------------------------+
 # | Environment Variables              |
 # +------------------------------------+
+WEZTERM_LOG=config=debug,wezterm_font=debug,info
 
 # Basic exports
 export TERM='rxvt-256color'
@@ -24,6 +25,7 @@ export SAVEHIST=10000                              # Maximum events in history f
 # Library variables
 export WEZTERM="$XDG_CONFIG_HOME/wezterm"
 export WEZTERM_CONFIG_FILE=${WEZTERM_CONFIG_FILE:-$XDG_CONFIG_HOME/wezterm/wezterm.lua}
+export RIO="$XDG_CONFIG_HOME/rio"
 
 # You can use .zprofile to set environment vars for non-login, non-interactive shells.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then

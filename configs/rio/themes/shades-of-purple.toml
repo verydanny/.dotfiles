@@ -1,0 +1,39 @@
+[colors]
+# Regular colors
+background = '#131326'
+black = '#000000'
+blue = '#6943ff'
+cursor = '#F8F8F2'
+cyan = '#80fcff'
+foreground = '#EFEFE1'
+green = '#3ad900'
+magenta = '#ff2c70'
+red = '#D90429'
+white = '#c7c7c7'
+yellow = '#FAD000'
+
+# UI colors
+tabs = '#18182E'
+tabs-active = '#131326'
+
+# Dim colors
+dim-black = '#393C4b'
+dim-blue = '#AE7BF8'
+dim-cyan = '#69C3dE'
+dim-foreground = '#dfdfd9'
+dim-green = '#06572F'
+dim-magenta = '#FF60BB'
+dim-red = '#FF3C3C'
+dim-white = '#EFEFE1'
+dim-yellow = '#E6A003'
+
+# Light colors
+light-black = '#808080'
+light-blue = '#0066ff'
+light-cyan = '#00ffff'
+light-foreground = '#f8f8f1'
+light-green = '#33ff00'
+light-magenta = '#cc00ff'
+light-red = '#ff0000'
+light-white = '#ffffff'
+light-yellow = '#ffff00'
