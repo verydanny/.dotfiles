@@ -1,8 +1,8 @@
 #!/usr/bin/env zsh
+
 # +------------------------------------+
 # | Environment Variables              |
 # +------------------------------------+
-WEZTERM_LOG=config=debug,wezterm_font=debug,info
 
 # Basic exports
 export TERM='rxvt-256color'

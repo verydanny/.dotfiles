@@ -19,23 +19,18 @@ autoload -Uz $fpath[1]/*(.:t)
 source "$ZSH/.aliases"
 
 # +------------------------------------+
+# | Custom Prompt                      |
+# +------------------------------------+
+fpath=($ZSH/theme $fpath)
+autoload -Uz custom_prompt; custom_prompt
+
+# +------------------------------------+
 # | rust                               |
 # +------------------------------------+
 . "$HOME/.cargo/env"
 
 # +------------------------------------+
-# | fnm https://github.com/Schniz/fnm  |
-# +------------------------------------+
-FNM_PATH="$HOME/.local/share/fnm"
-eval "$(fnm env \
-  --use-on-cd \
-  --shell zsh \
-  # --version-file-strategy recursive \
-  # --corepack-enabled \
-  # --resolve-engines \
-)"
-
-# +------------------------------------+
 # | Compinit                           |
 # +------------------------------------+
 autoload -Uz compinit && compinit
+
