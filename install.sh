@@ -48,5 +48,6 @@ echo -e "${green}Wahoo installing..."
 # +------------------------------------+
 # | Libraries Install                  |
 # +------------------------------------+
-library_exists wezterm && dot_install wezterm    # install/install_wezterm
-library_exists rio && dot_install rio            # install/install_rio
+library_exists wezterm && dot_install wezterm        # install/install_wezterm
+library_exists rio && dot_install rio                # install/install_rio
+library_exists alacritty && dot_install alacritty    # install/install_alacritty

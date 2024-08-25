@@ -22,10 +22,15 @@ export HISTFILE="$ZDOTDIR/.zhistory"               # History file location
 export HISTSIZE=10000                              # Maximum events for internal history
 export SAVEHIST=10000                              # Maximum events in history file
 
-# Library variables
+# Wezterm
 export WEZTERM="$XDG_CONFIG_HOME/wezterm"
 export WEZTERM_CONFIG_FILE=${WEZTERM_CONFIG_FILE:-$XDG_CONFIG_HOME/wezterm/wezterm.lua}
+
+# Rio
 export RIO="$XDG_CONFIG_HOME/rio"
+
+# Alacritty
+export ALACRITTY="$XDG_CONFIG_HOME/alacritty"
 
 # You can use .zprofile to set environment vars for non-login, non-interactive shells.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then

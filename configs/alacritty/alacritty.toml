@@ -1,0 +1,20 @@
+live_config_reload = true
+
+[window]
+padding = { x = 10, y = 10 }
+decorations = "buttonless"
+opacity = 0.5
+blur = true
+
+[scrolling]
+history = 50000
+
+[font]
+normal = { family = "DankMono Nerd Font Propo", style = "Regular" }
+bold = { family = "DankMono Nerd Font Propo", style = "Bold" }
+italic = { family = "DankMono Nerd Font Propo", style = "Italic" }
+# bold_italic = {  }
+size = 20
+# offset = {  }
+# glyph_offset = {  }
+builtin_box_drawing = false

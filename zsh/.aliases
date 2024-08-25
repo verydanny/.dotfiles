@@ -2,4 +2,4 @@
 
 alias code="code-insiders"
 alias c="clear"
-alias wez-upgrade="brew upgrade --cask wezterm@nightly --no-quarantine --greedy-latest"
+alias weznup="brew upgrade --cask wezterm@nightly --no-quarantine --greedy-latest"

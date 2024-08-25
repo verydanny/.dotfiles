@@ -1,6 +1,10 @@
 .DS_Store
 
+# Hide environment
 .env
 .env.local
 .env.development
 .env.production
+
+# Hide local images
+assets/images/*

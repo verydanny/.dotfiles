@@ -5,41 +5,23 @@
 # Other available options are: '_' and '|'
 #
 cursor = '▇'
-
-# Blinking Cursor
-#
-# Default is true
-#
 blinking-cursor = false
-
-# Hide the cursor while typing
-#
-# Default is `false`
-#
-# hide-cursor-when-typing = false
+hide-cursor-when-typing = true
 
 # Ignore theme selection foreground color
 #
 # Default is false
 #
 # Example:
-# ignore-selection-foreground-color = false
-
-# Theme
-#
-# It makes Rio look for the specified theme in the themes folder
-# (macos and linux: ~/.config/rio/themes/dracula.toml)
-# (windows: C:\Users\USER\AppData\Local\rio\themes\dracula.toml)
-#
-# Example:
-theme = "shades-of-purple"
+ignore-selection-foreground-color = true
+theme = "dracula"
 
 # Padding-x
 #
 # define x axis padding (default is 0)
 #
 # Example:
-# padding-x = 10
+padding-x = 10
 
 # Padding-y
 #
@@ -47,7 +29,7 @@ theme = "shades-of-purple"
 # (default is [0, 0])
 #
 # Example:
-# padding-y = [30, 10]
+padding-y = [10, 10]
 
 # Option as Alt
 #
@@ -87,12 +69,12 @@ theme = "shades-of-purple"
 # Linux/BSD: fork processes
 #
 # Example:
-# use-fork = false
+use-fork = false
 
 # Confirm before exiting Rio
 # Default is `true`
 #
-# confirm-before-quit = false
+confirm-before-quit = false
 
 # Editor
 #
@@ -100,9 +82,9 @@ theme = "shades-of-purple"
 #
 # Whenever the key binding `OpenConfigEditor` is triggered it will
 # use the value of the editor along with the rio configuration path.
-# [editor]
-# program = "vi"
-# args = []
+[editor]
+program = "code-insiders"
+args = ["-w"]
 
 # Window configuration
 #
@@ -124,13 +106,21 @@ theme = "shades-of-purple"
 # • decorations - Set window decorations, options: "Enabled", "Disabled", "Transparent", "Buttonless"
 #
 # Example:
-# [window]
-# width = 600
-# height = 400
-# mode = "Windowed"
+[window]
+width = 1000
+height = 800
+mode = "Maximized"
+opacity = 0.95
+blur = false
+decorations = "Buttonless"
+
+# [window.background-image]
+# path = "/Users/daniel.veremchuk/.dotfiles/configs/rio/themes/intruder2.png"
+# width = 120
+# height = 300
 # opacity = 1.0
-# blur = false
-# decorations = "Enabled"
+# x = 180.0
+# y = 0.0
 
 # Renderer
 #
@@ -180,8 +170,40 @@ theme = "shades-of-purple"
 # will always look for regular font bounds whene
 #
 # You can also set family on root to overwrite all fonts
-# [fonts]
-#   family = "cascadiamono"
+[fonts]
+size = 16
+features = ["ss02", "ss03", "ss05", "ss19"]
+
+[fonts.regular]
+family = "MonoLisa Nerd Font Propo"
+style = "normal"
+weight = 300
+
+[fonts.bold]
+family = "MonoLisa Nerd Font Propo"
+style = "normal"
+weight = 600
+
+[fonts.italic]
+family = "MonoLisa Nerd Font Propo"
+style = "italic"
+weight = 300
+
+[fonts.bold-italic]
+family = "MonoLisa Nerd Font Propo"
+style = "italic"
+weight = 600
+
+[navigation]
+mode = "TopTab"
+
+# [renderer]
+# performance = "High"
+# backend = "Metal"
+# disable-unfocused-render = true
+# level = 1
+
+
 #
 # You can also specify extra fonts to load
 # [fonts]
@@ -189,7 +211,6 @@ theme = "shades-of-purple"
 #
 # In case you want to specify any font feature:
 # [fonts]
-# features = ["ss02", "ss03", "ss05", "ss19"]
 #
 # Note: Font features do not have support to live reload on configuration,
 # so to reflect your changes, you will need to close and reopen Rio.
