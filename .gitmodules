@@ -1,3 +1,0 @@
-[submodule "configs/wezterm/wezterm-types"]
-	path = configs/wezterm/wezterm-types
-	url = git@github.com:justinsgithub/wezterm-types.git
