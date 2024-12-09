@@ -10,7 +10,7 @@ fi
 # +------------------------------------+
 # | Editors                            |
 # +------------------------------------+
-CURRENT_EDITOR="code-insiders"
+CURRENT_EDITOR="cursor"
 export EDITOR="${EDITOR:-$CURRENT_EDITOR} -w"
 export VISUAL="${VISUAL:-$CURRENT_EDITOR} -w"
 export PAGER="${PAGER:-less}"
@@ -36,3 +36,7 @@ export INFOPATH="/opt/homebrew/share/info:${INFOPATH:-}";
 #   /usr/local/{,s}bin(N)
 #   $path
 # )
+
+# Added by OrbStack: command-line tools and integration
+# This won't be added again if you remove it.
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :

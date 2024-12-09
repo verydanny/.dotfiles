@@ -110,17 +110,17 @@ args = ["-w"]
 width = 1000
 height = 800
 mode = "Maximized"
-opacity = 0.95
-blur = false
+opacity = 1.0
+blur = true
 decorations = "Buttonless"
 
-# [window.background-image]
-# path = "/Users/daniel.veremchuk/.dotfiles/configs/rio/themes/intruder2.png"
-# width = 120
-# height = 300
-# opacity = 1.0
-# x = 180.0
-# y = 0.0
+[window.background-image]
+path = "/Users/daniel.veremchuk/.dotfiles/assets/images/astolfo.png"
+width = 120
+height = 300
+opacity = 0.5
+x = -80.0
+y = -20.0
 
 # Renderer
 #
@@ -197,7 +197,7 @@ weight = 600
 [navigation]
 mode = "TopTab"
 
-# [renderer]
+[renderer]
 # performance = "High"
 # backend = "Metal"
 # disable-unfocused-render = true

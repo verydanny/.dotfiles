@@ -6,11 +6,27 @@
 setopt extended_glob
 setopt COMBINING_CHARS
 
+# +------------------------------------+
+# | Brew ZSH Autocompletions           |
+# +------------------------------------+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+
+  # autoload -Uz compinit
+  # compinit
+fi
+
 # $ZSH defined in zsh/.zshenv
 ZFUNCDIR=${ZFUNCDIR:-$ZSH/functions}
 ZCOMPLETIONDIR=${ZCOMPLETIONDIR:-$ZSH/completions}
 fpath=($ZFUNCDIR $ZCOMPLETIONDIR $fpath)
 # autoload -Uz $fpath[1]/*(.:t)
+
+# +------------------------------------+
+# | Kubernetes Funnel Config           |
+# +------------------------------------+
+export KUBECONFIG="${HOME}/.kube/sso-staging-a-kubeconfig:$KUBECONFIG"
+export KUBECONFIG="${HOME}/.kube/sso-production-b-kubeconfig:$KUBECONFIG"
 
 # +------------------------------------+
 # | Additional Completions             |
@@ -39,7 +55,25 @@ source "$ZSH/theme/custom_prompt"
 # +------------------------------------+
 # | Compinit                           |
 # +------------------------------------+
-autoload -Uz compinit && compinit
+# autoload -Uz compinit && compinit
+# Load compinit only when needed
+autoload -U compinit && compinit
+
+# Uncomment as needed
+# # +------------------------------------+
+# # | Go                                 |
+# # +------------------------------------+
+# if [ -x "$(command -v go)" ] && [ -d "$(go env GOPATH)/bin" ]; then
+#     PATH="$(go env GOPATH)/bin:$PATH"
+# fi
+
+# +------------------------------------+
+# | Bun                                |
+# +------------------------------------+
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+[ -s "/Users/daniel.veremchuk/.bun/_bun" ] && source "/Users/daniel.veremchuk/.bun/_bun"
+
 
 # +------------------------------------+
 # | rust                               |
@@ -59,11 +93,12 @@ source "$HOME/.cargo/env"
 FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
-  eval "`fnm env \
-    --shell=zsh \
-    --use-on-cd \
-    --version-file-strategy=local \
-    --corepack-enabled \
-    --resolve-engines \
-  `"
+  eval "$(
+    fnm env \
+      --shell=zsh \
+      --use-on-cd \
+      --version-file-strategy=local \
+      --corepack-enabled \
+      --resolve-engines
+  )"
 fi
