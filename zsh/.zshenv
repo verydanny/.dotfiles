@@ -32,8 +32,8 @@ export RIO="$XDG_CONFIG_HOME/rio"
 # Alacritty
 export ALACRITTY="$XDG_CONFIG_HOME/alacritty"
 
-# Sketchybar
-export SKETCHYBAR="$XDG_CONFIG_HOME/sketchybar"
+# # Sketchybar
+# export SKETCHYBAR="$XDG_CONFIG_HOME/sketchybar"
 
 # You can use .zprofile to set environment vars for non-login, non-interactive shells.
 if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; then

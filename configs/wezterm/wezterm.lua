@@ -25,12 +25,19 @@ config.custom_block_glyphs = true
 config.exit_behavior = 'CloseOnCleanExit'
 -- config.window_close_confirmation = 'NeverPrompt'
 
+---------------------------
+-- KEYBINDINGS
+---------------------------
 config.keys = {
     {
         key = 'k',
         mods = 'CMD',
         action = act.ClearScrollback 'ScrollbackAndViewport',
     },
+    -- Move the current tab one position to the left
+    { key = "[", mods = "CMD|SHIFT", action = wezterm.action.MoveTabRelative(-1) },
+    -- Move the current tab one position to the right
+    { key = "]", mods = "CMD|SHIFT", action = wezterm.action.MoveTabRelative(1) },
 }
 
 config.line_height = 1.0
@@ -228,5 +235,7 @@ config.background = {
         height = '100%'
     },
 }
+
+
 
 return config

@@ -39,16 +39,16 @@ echo -e "${green}Wahoo installing..."
 # +------------------------------------+
 # | Basics Install                     |
 # +------------------------------------+
-# install_fonts          # install/install_functions.sh:62
-# install_xcode          # install/install_functions.sh:88
-# install_homebrew       # install/install_functions.sh:104
-# install_library zsh    # install/install_functions.sh:45
-# install_zsh_configs    # install/install_functions.sh:113
+install_fonts          # install/install_functions.sh:62
+install_xcode          # install/install_functions.sh:88
+install_homebrew       # install/install_functions.sh:104
+install_library zsh    # install/install_functions.sh:45
+install_zsh_configs    # install/install_functions.sh:113
 
 # +------------------------------------+
 # | Libraries Install                  |
 # +------------------------------------+
-# library_exists wezterm && dot_install wezterm        # install/install_wezterm
+library_exists wezterm && dot_install wezterm        # install/install_wezterm
 # library_exists rio && dot_install rio                # install/install_rio
 # library_exists alacritty && dot_install alacritty    # install/install_alacritty
-library_exists sketchybar && dot_install sketchybar  # install/install_sketchybar
+# library_exists sketchybar && dot_install sketchybar  # install/install_sketchybar

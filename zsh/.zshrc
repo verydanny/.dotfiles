@@ -37,7 +37,7 @@ export KUBECONFIG="${HOME}/.kube/sso-production-b-kubeconfig:$KUBECONFIG"
 # | My Helpers                         |
 # +------------------------------------+
 
-# Chuck-based tools
+# Docker/Chuck-based tools
 source "$ZSH/helpers/dcr.sh"
 
 # +------------------------------------+
@@ -56,7 +56,6 @@ source "$ZSH/theme/custom_prompt"
 # | Compinit                           |
 # +------------------------------------+
 # autoload -Uz compinit && compinit
-# Load compinit only when needed
 autoload -U compinit && compinit
 
 # Uncomment as needed
@@ -98,7 +97,12 @@ if [ -d "$FNM_PATH" ]; then
       --shell=zsh \
       --use-on-cd \
       --version-file-strategy=local \
-      --corepack-enabled \
-      --resolve-engines
+      --resolve-engines \
+      --fnm-dir=$FNM_PATH
+      # --corepack-enabled \
   )"
 fi
+
+# Created by `pipx` on 2024-12-16 16:06:47
+export PATH="$PATH:/Users/daniel.veremchuk/.local/bin"
+. "/Users/daniel.veremchuk/.deno/env"

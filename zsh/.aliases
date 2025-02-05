@@ -3,3 +3,6 @@
 alias code="code-insiders"
 alias c="clear"
 alias weznup="brew upgrade --cask wezterm@nightly --no-quarantine --greedy-latest"
+alias install-wezterm="brew install --cask wezterm@nightly"
+alias firefoxmy="\"/Applications/Firefox Nightly.app/Contents/MacOS/firefox\" -P personal"
+alias firefoxwork="\"/Applications/Firefox Developer Edition.app/Contents/MacOS/firefox\" -P work"
